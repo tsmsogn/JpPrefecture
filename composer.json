@@ -1,0 +1,24 @@
+{
+    "name": "tsmsogn/jp-prefecture",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tsmsogn",
+            "email": "tsmsogn@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JpPrefecture\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JpPrefecture\\Test\\": "tests/"
+        }
+    }
+}
