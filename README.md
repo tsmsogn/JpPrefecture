@@ -27,3 +27,9 @@ $exists = JpPrefecture\JpPrefecture::exists(1)
 ```php
 $prefectures = JpPrefecture\JpPrefecture::all();
 ```
+
+- Get prefecture list
+
+```php
+$prefectures = JpPrefecture\JpPrefecture::asList();
+```
