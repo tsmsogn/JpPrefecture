@@ -16,6 +16,12 @@ composer require tsmsogn/jp-prefecture
 $hokkaido = JpPrefecture\JpPrefecture::get(1);
 ```
 
+- Check if whether the prefecture exists
+
+```php
+$exists = JpPrefecture\JpPrefecture::exists(1)
+```
+
 - Get all prefectures
 
 ```php
