@@ -10,13 +10,13 @@ composer require tsmsogn/jp-prefecture
 
 ## Usage
 
-- Get Prefecture
+- Get prefecture
 
 ```php
 $hokkaido = JpPrefecture\JpPrefecture::get(1);
 ```
 
-- Get All Prefectures
+- Get all prefectures
 
 ```php
 $prefectures = JpPrefecture\JpPrefecture::all();
