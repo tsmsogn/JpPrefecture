@@ -45,7 +45,19 @@ class JpPrefecture
      */
     public static function all()
     {
-        $prefectures = [
+        $prefectures = self::asList();
+
+        return array_map(function ($code, $name) {
+            return new Prefecture($code, $name);
+        }, array_keys($prefectures), $prefectures);
+    }
+
+    /**
+     * @return array
+     */
+    public static function asList()
+    {
+        return [
             1 => '北海道',
             2 => '青森県',
             3 => '岩手県',
@@ -94,9 +106,5 @@ class JpPrefecture
             46 => '鹿児島県',
             47 => '沖縄県',
         ];
-
-        return array_map(function ($code, $name) {
-            return new Prefecture($code, $name);
-        }, array_keys($prefectures), $prefectures);
     }
 }

@@ -50,4 +50,15 @@ class JpPrefectureTest extends TestCase
 
         $this->assertCount(47, $prefectures);
     }
+
+    /**
+     * @return void
+     */
+    public function testAsList()
+    {
+        $prefectures = JpPrefecture::asList();
+
+        $this->assertInternalType('array', $prefectures);
+        $this->assertCount(47, $prefectures);
+    }
 }
