@@ -35,6 +35,15 @@ class JpPrefectureTest extends TestCase
     /**
      * @return void
      */
+    public function testExists()
+    {
+        $this->assertFalse(JpPrefecture::exists(0));
+        $this->assertTrue(JpPrefecture::exists(1));
+    }
+
+    /**
+     * @return void
+     */
     public function testAll()
     {
         $prefectures = JpPrefecture::all();

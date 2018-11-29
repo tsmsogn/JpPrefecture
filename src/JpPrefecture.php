@@ -27,6 +27,20 @@ class JpPrefecture
     }
 
     /**
+     * @param $code
+     * @return bool
+     */
+    public static function exists($code)
+    {
+        try {
+            self::get($code);
+            return true;
+        } catch (InvalidPrefectureException $e) {
+            return false;
+        }
+    }
+
+    /**
      * @return \JpPrefecture\PrefectureInterface[]
      */
     public static function all()
