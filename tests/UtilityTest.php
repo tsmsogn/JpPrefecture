@@ -28,6 +28,7 @@ class UtilityTest extends TestCase
         $hokkaido = Utility::getPrefecture(1);
 
         $this->assertInstanceOf(PrefectureInterface::class, $hokkaido);
+        $this->assertEquals(1, $hokkaido->getCode());
         $this->assertEquals('北海道', $hokkaido->getName());
     }
 
