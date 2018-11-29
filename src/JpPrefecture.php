@@ -8,16 +8,16 @@ use JpPrefecture\Exception\InvalidPrefectureException;
  * Class Utility
  * @package JpPrefecture
  */
-class Utility
+class JpPrefecture
 {
     /**
      * @param $code
      * @return \JpPrefecture\PrefectureInterface
      * @throws \JpPrefecture\Exception\InvalidPrefectureException
      */
-    public static function getPrefecture($code)
+    public static function get($code)
     {
-        foreach (self::getAllPrefectures() as $prefecture) {
+        foreach (self::all() as $prefecture) {
             if ($prefecture->getCode() == $code) {
                 return $prefecture;
             }
@@ -29,7 +29,7 @@ class Utility
     /**
      * @return \JpPrefecture\PrefectureInterface[]
      */
-    public static function getAllPrefectures()
+    public static function all()
     {
         $prefectures = [
             1 => '北海道',

@@ -4,28 +4,28 @@ namespace JpPrefecture\Test;
 
 use JpPrefecture\Exception\InvalidPrefectureException;
 use JpPrefecture\PrefectureInterface;
-use JpPrefecture\Utility;
+use JpPrefecture\JpPrefecture;
 use PHPUnit\Framework\TestCase;
 
-class UtilityTest extends TestCase
+class JpPrefectureTest extends TestCase
 {
 
     /**
      * @throws \JpPrefecture\Exception\InvalidPrefectureException
      */
-    public function testGetPrefectureWithInvalidCode()
+    public function testGetWithInvalidCode()
     {
         $this->expectException(InvalidPrefectureException::class);
 
-        Utility::getPrefecture(0);
+        JpPrefecture::get(0);
     }
 
     /**
      * @throws \JpPrefecture\Exception\InvalidPrefectureException
      */
-    public function testGetPrefecture()
+    public function testGet()
     {
-        $hokkaido = Utility::getPrefecture(1);
+        $hokkaido = JpPrefecture::get(1);
 
         $this->assertInstanceOf(PrefectureInterface::class, $hokkaido);
         $this->assertEquals(1, $hokkaido->getCode());
@@ -35,9 +35,9 @@ class UtilityTest extends TestCase
     /**
      * @return void
      */
-    public function testGetAllPrefectures()
+    public function testAll()
     {
-        $prefectures = Utility::getAllPrefectures();
+        $prefectures = JpPrefecture::all();
 
         $this->assertCount(47, $prefectures);
     }
