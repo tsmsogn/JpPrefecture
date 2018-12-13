@@ -15,7 +15,7 @@ class JpPrefectureTest extends TestCase
      */
     public function testGetWithInvalidCode()
     {
-        $this->expectException(InvalidPrefectureException::class);
+        $this->setExpectedException(InvalidPrefectureException::class);
 
         JpPrefecture::get(0);
     }
