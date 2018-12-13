@@ -15,7 +15,7 @@ class JpPrefectureTest extends TestCase
      */
     public function testGetWithInvalidCode()
     {
-        $this->expectException(InvalidPrefectureException::class);
+        $this->setExpectedException('\\JpPrefecture\\Exception\\InvalidPrefectureException');
 
         JpPrefecture::get(0);
     }
@@ -27,7 +27,7 @@ class JpPrefectureTest extends TestCase
     {
         $hokkaido = JpPrefecture::get(1);
 
-        $this->assertInstanceOf(PrefectureInterface::class, $hokkaido);
+        $this->assertInstanceOf('\\JpPrefecture\\PrefectureInterface', $hokkaido);
         $this->assertEquals(1, $hokkaido->getCode());
         $this->assertEquals('北海道', $hokkaido->getName());
     }
