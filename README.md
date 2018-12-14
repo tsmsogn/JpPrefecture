@@ -13,6 +13,7 @@ composer require tsmsogn/jp-prefecture
 - Get prefecture
 
 ```php
+<?php
 $hokkaido = JpPrefecture\JpPrefecture::get(1);
 echo $hokkaido->getCode() . "\n";
 echo $hokkaido->getName() . "\n";
@@ -26,6 +27,7 @@ echo $hokkaido->getName() . "\n";
 - Check if whether the prefecture exists
 
 ```php
+<?php
 var_dump(\JpPrefecture\JpPrefecture::exists(1));  // bool(true)
 var_dump(\JpPrefecture\JpPrefecture::exists(48)); // bool(false)
 ```
@@ -33,12 +35,14 @@ var_dump(\JpPrefecture\JpPrefecture::exists(48)); // bool(false)
 - Get all prefectures
 
 ```php
+<?php
 $prefectures = JpPrefecture\JpPrefecture::all();
 ```
 
 - Get prefecture list
 
 ```php
+<?php
 print_r(JpPrefecture\JpPrefecture::asList());
 ```
 
