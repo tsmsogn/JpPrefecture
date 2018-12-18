@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tsmsogn/JpPrefecture.svg?branch=master)](https://travis-ci.org/tsmsogn/JpPrefecture)
 
-### Requirements
+## Requirements
 
 - PHP 5.3+
 
