@@ -1,6 +1,7 @@
 # JpPrefecture
 
 [![Build Status](https://travis-ci.org/tsmsogn/JpPrefecture.svg?branch=master)](https://travis-ci.org/tsmsogn/JpPrefecture)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tsmsogn/JpPrefecture/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tsmsogn/JpPrefecture/?branch=master)
 
 ## Requirements
 
